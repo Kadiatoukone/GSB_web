@@ -1,0 +1,93 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 1.5rem;
+  background: #14283d;
+  color: #fff;
+  font-family: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-header__logo img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.site-header__logo h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-right: auto;
+  margin-left: 1.5rem;
+}
+
+.site-header__home,
+.site-header__link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #9fd3ff;
+  transition: color 0.2s;
+}
+
+.site-header__home {
+  color: #fff;
+  font-weight: 600;
+}
+
+.site-header__link:hover {
+  color: #fff;
+}
+
+.site-header__panier {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header__name {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #b8c4d2;
+}
+
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  background: #1c3550;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.site-header__right:hover {
+  background: #24425f;
+}
+
+.site-header__right svg {
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,20 @@
+export const produits = [
+  { id: 1, nom: "Doliprane 1000 mg", categorie: "Antalgiques", description: "Paracétamol — douleurs et fièvre. Boîte de 8 comprimés.", prixHT: 2.35 },
+  { id: 3, nom: "Ibuprofène 400 mg", categorie: "Anti-inflammatoires", description: "Anti-inflammatoire non stéroïdien. Boîte de 20 comprimés.", prixHT: 2.10 },
+  { id: 4, nom: "Ventoline 100 µg", categorie: "Pneumologie", description: "Salbutamol — bronchodilatateur en aérosol doseur.", prixHT: 5.40 },
+  { id: 5, nom: "Spasfon 80 mg", categorie: "Antalgiques", description: "Phloroglucinol — douleurs spasmodiques. Boîte de 30 comprimés.", prixHT: 3.15 },
+  { id: 6, nom: "Kardégic 75 mg", categorie: "Cardiologie", description: "Acétylsalicylate — prévention cardiovasculaire. Boîte de 30 sachets.", prixHT: 3.90 },
+  {
+  id: 2,
+  nom: "Amoxicilline 500 mg",
+  categorie: "Antibiotiques",
+  description: "Antibiotique de la famille des pénicillines (aminopénicillines), indiqué dans le traitement de nombreuses infections bactériennes. Boîte de 12 gélules.",
+  prixHT: 4.80,
+  substance: "Amoxicilline (trihydrate)",
+  dosage: "500 mg",
+  forme: "Gélule",
+  conditionnement: "Boîte de 12",
+  fournisseur: "Laboratoire GSB",
+  reference: "GSB-AMOX-500",
+},
+];
