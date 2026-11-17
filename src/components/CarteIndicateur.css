@@ -1,0 +1,33 @@
+.carte-indicateur {
+  padding: 1.2rem 1.4rem;
+  background: #fff;
+  border: 1px solid #e3e8ed;
+  border-radius: 12px;
+}
+
+.carte-indicateur__libelle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7a8c;
+}
+
+.carte-indicateur__valeur {
+  margin: 0.4rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #14283d;
+}
+
+.carte-indicateur__evolution {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.carte-indicateur__evolution--hausse {
+  color: #1f7a35;
+}
+
+.carte-indicateur__evolution--baisse {
+  color: #b03a2e;
+}

@@ -1,0 +1,152 @@
+/* ----- En-tête ----- */
+.tableau-de-bord__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.tableau-de-bord__title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #14283d;
+}
+
+.tableau-de-bord__subtitle {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #6b7a8c;
+}
+
+.tableau-de-bord__periode {
+  height: 38px;
+  padding: 0 0.7rem;
+  background: #fff;
+  border: 1px solid #cfd7df;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+/* ----- Les 4 indicateurs ----- */
+.tableau-de-bord__indicateurs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ----- Les deux grandes cartes ----- */
+.tableau-de-bord__grille {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.tableau-de-bord__carte {
+  padding: 1.5rem 1.6rem;
+  background: #fff;
+  border: 1px solid #e3e8ed;
+  border-radius: 12px;
+}
+
+.tableau-de-bord__carte-title {
+  margin: 0 0 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #14283d;
+}
+
+.tableau-de-bord__carte-title--second {
+  margin-top: 1.9rem;
+}
+
+/* ----- Barres horizontales ----- */
+.tableau-de-bord__ligne {
+  margin-bottom: 0.9rem;
+}
+
+.tableau-de-bord__ligne-libelle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.tableau-de-bord__barre-fond {
+  height: 8px;
+  background: #f4f6f8;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.tableau-de-bord__barre {
+  height: 100%;
+  background: #13a69f;
+  border-radius: 999px;
+}
+
+.tableau-de-bord__pastille {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+}
+
+/* Chiffres en police à chasse fixe (charte graphique, annexe A.2) */
+.tableau-de-bord__chiffre {
+  font-family: Consolas, 'Courier New', monospace;
+  font-weight: 600;
+  color: #14283d;
+}
+
+/* ----- Histogramme ----- */
+.tableau-de-bord__histogramme {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.tableau-de-bord__colonne {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.tableau-de-bord__colonne-zone {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 140px;
+}
+
+.tableau-de-bord__colonne-barre {
+  width: 100%;
+  background: #bfe5e1;
+  border-radius: 6px 6px 0 0;
+}
+
+.tableau-de-bord__colonne-barre--actuelle {
+  background: #13a69f;
+}
+
+.tableau-de-bord__mois {
+  color: #6b7a8c;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 1100px) {
+  .tableau-de-bord__indicateurs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tableau-de-bord__grille {
+    grid-template-columns: 1fr;
+  }
+}
