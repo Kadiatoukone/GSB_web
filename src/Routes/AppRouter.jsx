@@ -1,28 +1,41 @@
-import { Routes, Route } from 'react-router';
+import { Routes, Route, Link } from 'react-router';
 
 import Login from '../pages/login/Login.jsx';
 import Catalogue from '../pages/catalogue/Catalogue.jsx';
 import Details from '../pages/fiche-produit/Details.jsx';
 import Panier from '../pages/panier/Panier.jsx';
+import Commandes from '../pages/commandes/Commandes.jsx';
+import Compte from '../pages/compte/Compte.jsx';
 import AdminLayout from '../components/AdminLayout.jsx';
 import TableauDeBord from '../pages/admin/tableau-de-bord/TableauDeBord.jsx';
 
-function AppRouter() {
-
+function NotFound() {
     return (
-        <>
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/" element={<Catalogue />} />
-                <Route path="/details/:id" element={<Details />} />
-                <Route path="/panier" element={<Panier />} />
+        <main className="not-found">
+            <h1>Page introuvable</h1>
+            <p>Cette page n’existe pas dans la démonstration GSB.</p>
+            <Link to="/">Retour au catalogue</Link>
+        </main>
+    );
+}
 
-                {/* Espace admin : AdminLayout dessine le cadre, la route enfant va dans son <Outlet /> */}
-                <Route path="/admin" element={<AdminLayout />}>
-                    <Route index element={<TableauDeBord />} />
-                </Route>
-            </Routes>
-        </>
+function AppRouter() {
+    return (
+        <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Catalogue />} />
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/panier" element={<Panier />} />
+            <Route path="/commandes" element={<Commandes />} />
+            <Route path="/compte" element={<Compte />} />
+
+            {/* Espace admin : AdminLayout dessine le cadre, la route enfant va dans son <Outlet /> */}
+            <Route path="/admin" element={<AdminLayout />}>
+                <Route index element={<TableauDeBord />} />
+            </Route>
+
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     )
 }
 
