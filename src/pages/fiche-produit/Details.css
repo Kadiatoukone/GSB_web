@@ -64,29 +64,49 @@
 }
 
 .details__price-box {
-  padding: 1rem 1.2rem;
-  margin-bottom: 1rem;
-  background: #fff;
-  border: 1px solid #e3e8ee;
-  border-radius: 12px;
+  width: fit-content;
+  min-width: 260px;
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 1.2rem;
+  background: #f4f6f8;
+  border-left: 3px solid #13a69f;
+  border-radius: 8px;
 }
 
 .details__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
   margin: 0;
-  font-size: 0.7rem;
-  color: #6b7a8c;
 }
 
 .details__price strong {
-  font-size: 1.4rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: #14283d;
 }
 
-.details__ht,
+.details__ttc {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5b6b78;
+}
+
+/* Le HT est une vraie information pour un professionnel : taille lisible, couleur du texte courant */
+.details__ht {
+  margin: 0.6rem 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px solid #dfe5eb;
+  font-size: 0.85rem;
+  color: #2d3b47;
+}
+
+/* La TVA est un détail du calcul : un peu plus petite, en gris (contraste conforme RGAA) */
 .details__tva {
   margin: 0.2rem 0 0;
-  font-size: 0.65rem;
-  color: #9aa5b4;
+  font-size: 0.8rem;
+  color: #5b6b78;
 }
 
 .details__actions {

@@ -91,14 +91,18 @@ function Details() {
                         <h1 className="details__title">{produit.nom}</h1>
                         <p className="details__description">{produit.description}</p>
 
-                        <p className="details__price">
+                        {/* Encadré prix : le TTC en premier (c'est ce que le client paie), puis le HT et la TVA */}
+                        <div className="details__price-box">
                             {/* toFixed(2) : 2 décimales ; replace : virgule à la française (4.90 → 4,90) */}
-                            <span className="details__ht">
+                            <p className="details__price">
+                                <strong>{prixTTC.toFixed(2).replace('.', ',')} €</strong>
+                                <span className="details__ttc">TTC / boîte</span>
+                            </p>
+                            <p className="details__ht">
                                 {produit.prixHT.toFixed(2).replace('.', ',')} € HT
-                            </span>
-                            <strong>{prixTTC.toFixed(2).replace('.', ',')} €</strong>
-                            <span className="details__ttc">TTC</span>
-                        </p>
+                            </p>
+                            <p className="details__tva">TVA 2,10 % (médicament remboursable)</p>
+                        </div>
 
                         <div className="details__actions">
                             {/* Sélecteur de quantité */}
