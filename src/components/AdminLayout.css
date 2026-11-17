@@ -81,3 +81,46 @@
   min-width: 0;
   padding: 2.5rem 3rem;
 }
+
+/* ----- Responsive : sur tablette et smartphone, le menu passe en haut ----- */
+@media (max-width: 900px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-layout__menu {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .admin-layout__logo {
+    width: 100%;
+    margin-bottom: 0.4rem;
+    padding: 0;
+  }
+
+  /* Les titres de rubrique et le nom de l'admin prennent trop de place : on les masque */
+  .admin-layout__rubrique,
+  .admin-layout__connecte {
+    display: none;
+  }
+
+  .admin-layout__link {
+    padding: 0.5rem 0.8rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .admin-layout__link.active {
+    border-bottom-color: #13a69f;
+  }
+
+  .admin-layout__contenu {
+    padding: 1.5rem 1rem;
+  }
+}

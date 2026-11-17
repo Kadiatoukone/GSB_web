@@ -1,0 +1,91 @@
+/* Deux colonnes : le détail à gauche, le statut et les totaux à droite */
+.detail-commande {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* min-width: 0 : sans ça, une colonne de grille refuse de devenir plus étroite que son tableau */
+.detail-commande > div {
+  min-width: 0;
+}
+
+.detail-commande__statut {
+  border: 2px solid #13a69f;
+}
+
+.detail-commande__ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #eef1f4;
+  font-size: 0.85rem;
+}
+
+.detail-commande__ligne:last-child {
+  border-bottom: none;
+}
+
+.detail-commande__ligne span:first-child {
+  color: #5b6b78;
+}
+
+.detail-commande__ligne--total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #14283d;
+}
+
+.detail-commande__ligne--total span:first-child {
+  color: #14283d;
+}
+
+.detail-commande__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.detail-commande__note {
+  margin: 0.8rem 0 0;
+  font-size: 0.8rem;
+  color: #5b6b78;
+}
+
+.detail-commande__infos {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0.6rem 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.detail-commande__infos dt {
+  color: #5b6b78;
+}
+
+.detail-commande__infos dd {
+  margin: 0;
+  color: #2d3b47;
+}
+
+@media (max-width: 1000px) {
+  .detail-commande {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .detail-commande__infos {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .detail-commande__infos dd {
+    margin-bottom: 0.6rem;
+  }
+}

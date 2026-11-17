@@ -1,0 +1,320 @@
+/* Styles communs aux pages de gestion de l'admin (comptes, catalogue, commandes) */
+
+/* ----- En-tête de page ----- */
+.admin-page__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-page__title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #14283d;
+}
+
+.admin-page__subtitle {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #5b6b78;
+}
+
+.admin-page__fil {
+  margin: 0 0 0.8rem;
+  font-size: 0.85rem;
+  color: #5b6b78;
+}
+
+.admin-page__fil a {
+  color: #13a69f;
+  text-decoration: none;
+}
+
+/* ----- Boutons ----- */
+.admin-page__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 40px;
+  padding: 0 1.1rem;
+  background: #13a69f;
+  border: 1px solid #13a69f;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-page__button:hover {
+  background: #0f8f89;
+}
+
+.admin-page__button--secondaire {
+  background: #fff;
+  color: #13a69f;
+}
+
+.admin-page__button--secondaire:hover {
+  background: #e3f3f1;
+}
+
+.admin-page__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Petits boutons carrés d'action dans les tableaux */
+.admin-page__icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+  color: #2d3b47;
+  cursor: pointer;
+}
+
+.admin-page__icon-button:hover {
+  border-color: #13a69f;
+  color: #13a69f;
+}
+
+.admin-page__icon-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ----- Barre de recherche et filtres ----- */
+.admin-page__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.admin-page__search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 220px;
+  max-width: 340px;
+  height: 40px;
+  padding: 0 0.8rem;
+  background: #fff;
+  border: 1px solid #cfd7df;
+  border-radius: 8px;
+  color: #5b6b78;
+}
+
+.admin-page__search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.admin-page__select,
+.admin-page__input {
+  height: 40px;
+  padding: 0 0.7rem;
+  background: #fff;
+  border: 1px solid #cfd7df;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #2d3b47;
+}
+
+.admin-page__input--zone {
+  height: auto;
+  min-height: 80px;
+  padding: 0.6rem 0.7rem;
+  resize: vertical;
+}
+
+.admin-page__select:focus,
+.admin-page__input:focus,
+.admin-page__search:focus-within {
+  outline: 2px solid #13a69f;
+  outline-offset: -1px;
+}
+
+/* ----- Messages ----- */
+.admin-page__message,
+.admin-page__erreur {
+  margin: 0 0 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.admin-page__message {
+  background: #e4f6e8;
+  color: #1f7a35;
+}
+
+.admin-page__erreur {
+  background: #fbe7e5;
+  color: #b03a2e;
+}
+
+/* ----- Cartes ----- */
+.admin-page__card {
+  margin-bottom: 1.5rem;
+  overflow-x: auto; /* un tableau trop large défile dans sa carte au lieu de déborder */
+  padding: 1.4rem 1.5rem;
+  background: #fff;
+  border: 1px solid #e3e8ed;
+  border-radius: 12px;
+}
+
+.admin-page__card-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #14283d;
+}
+
+/* ----- Formulaires ----- */
+.admin-page__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.2rem;
+}
+
+.admin-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.admin-page__field--large {
+  grid-column: 1 / -1;
+}
+
+.admin-page__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #14283d;
+}
+
+.admin-page__form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+/* ----- Tableaux ----- */
+.admin-page__table-wrapper {
+  position: relative; /* garde le texte .sr-only à l'intérieur du tableau qui défile */
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e3e8ed;
+  border-radius: 12px;
+}
+
+.admin-page__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.admin-page__table th {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e3e8ed;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #6f8597;
+}
+
+.admin-page__table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #eef1f4;
+  vertical-align: middle;
+}
+
+.admin-page__table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-page__table .admin-page__nombre {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.admin-page__principal {
+  font-weight: 600;
+  color: #14283d;
+}
+
+.admin-page__secondaire {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+  color: #5b6b78;
+}
+
+/* Données techniques (e-mails, références, numéros) : police à chasse fixe (charte A.2) */
+.admin-page__mono {
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+.admin-page__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.admin-page__lien {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #13a69f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-page__vide {
+  padding: 2rem;
+  text-align: center;
+  color: #5b6b78;
+}
+
+@media (max-width: 900px) {
+  .admin-page__form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-page__top {
+    flex-direction: column;
+  }
+
+  .admin-page__search {
+    max-width: none;
+  }
+}
+
+/* Texte lu par les lecteurs d'écran mais invisible à l'écran (accessibilité) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

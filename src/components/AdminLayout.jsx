@@ -1,11 +1,27 @@
+import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router';
 import { LayoutDashboard, Users, Package, ClipboardList } from 'lucide-react';
 import './AdminLayout.css';
 import Logo from '../assets/logo-GSB.png';
+import {
+    comptesInitiaux,
+    categoriesInitiales,
+    produitsInitiaux,
+    commandesInitiales,
+} from '../data/donneesAdmin.js';
 
 // Cadre commun à toutes les pages admin :
 // la barre latérale reste, seule la page dans <Outlet /> change.
 function AdminLayout() {
+    // Les données de l'admin sont gardées ICI, dans le cadre, et pas dans chaque page :
+    // comme le cadre reste affiché quand on change de page admin, les modifications
+    // (compte désactivé, statut de commande changé...) sont conservées pendant la navigation.
+    // PROVISOIRE : elles reviennent à zéro si on recharge la page, en attendant l'API.
+    const [comptes, setComptes] = useState(comptesInitiaux);
+    const [categories, setCategories] = useState(categoriesInitiales);
+    const [produits, setProduits] = useState(produitsInitiaux);
+    const [commandes, setCommandes] = useState(commandesInitiales);
+
     return (
         <div className="admin-layout">
             <aside className="admin-layout__menu">
@@ -36,7 +52,15 @@ function AdminLayout() {
             </aside>
 
             <main className="admin-layout__contenu">
-                <Outlet />
+                {/* context : les données sont transmises à la page affichée (lue avec useOutletContext) */}
+                <Outlet
+                    context={{
+                        comptes, setComptes,
+                        categories, setCategories,
+                        produits, setProduits,
+                        commandes, setCommandes,
+                    }}
+                />
             </main>
         </div>
     );

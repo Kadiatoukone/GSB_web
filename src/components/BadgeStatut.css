@@ -1,0 +1,33 @@
+.badge-statut {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-statut--succes {
+  background: #e4f6e8;
+  color: #1f7a35;
+}
+
+.badge-statut--neutre {
+  background: #eef1f4;
+  color: #5b6b78;
+}
+
+.badge-statut--info {
+  background: #e6edf5;
+  color: #14283d;
+}
+
+.badge-statut--bleu {
+  background: #e3f1f8;
+  color: #1c6e9a;
+}
+
+.badge-statut--danger {
+  background: #fbe7e5;
+  color: #b03a2e;
+}

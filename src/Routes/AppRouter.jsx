@@ -8,6 +8,10 @@ import Commandes from '../pages/commandes/Commandes.jsx';
 import Compte from '../pages/compte/Compte.jsx';
 import AdminLayout from '../components/AdminLayout.jsx';
 import TableauDeBord from '../pages/admin/tableau-de-bord/TableauDeBord.jsx';
+import ComptesAdmin from '../pages/admin/comptes/ComptesAdmin.jsx';
+import CatalogueAdmin from '../pages/admin/catalogue/CatalogueAdmin.jsx';
+import CommandesAdmin from '../pages/admin/commandes/CommandesAdmin.jsx';
+import DetailCommandeAdmin from '../pages/admin/commandes/DetailCommandeAdmin.jsx';
 
 function NotFound() {
     return (
@@ -32,6 +36,10 @@ function AppRouter() {
             {/* Espace admin : AdminLayout dessine le cadre, la route enfant va dans son <Outlet /> */}
             <Route path="/admin" element={<AdminLayout />}>
                 <Route index element={<TableauDeBord />} />
+                <Route path="comptes" element={<ComptesAdmin />} />
+                <Route path="catalogue" element={<CatalogueAdmin />} />
+                <Route path="commandes" element={<CommandesAdmin />} />
+                <Route path="commandes/:id" element={<DetailCommandeAdmin />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
